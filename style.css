@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Overpass:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Orange: hsl(25, 97%, 53%);
+  --White: hsl(0, 0%, 100%);
+  --Light-Grey: hsl(217, 12%, 63%);
+  --Medium-Grey: hsl(216, 12%, 54%);
+  --Dark-Blue: hsl(213, 19%, 18%);
+  --Very-Dark-Blue: hsl(216, 12%, 8%);
+}
+
+html {
+  font-size: 15px;
+  font-family: "Overpass", sans-serif;
+}
+
+body {
+  background-color: var(--Very-Dark-Blue);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card__container {
+  position: relative;
+  width: 375px;
+  background-color: hsl(213, 19%, 18%);
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  overflow: hidden;
+}
+
+.card {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.favorite {
+  height: 40px;
+  width: 40px;
+  background-color: hsla(211, 15%, 27%, 0.582);
+  align-self: flex-start;
+  padding: 10px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.favorite img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card__title {
+  color: var(--White);
+}
+
+.card__para {
+  color: var(--Light-Grey);
+}
+
+.rating {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rating a {
+  color: var(--Light-Grey);
+  position: relative;
+  width: 50px;
+  height: 50px;
+  line-height: 55px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: hsla(211, 15%, 27%, 0.582);
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+}
+
+.rating a:hover {
+  background-color: var(--Orange);
+}
+
+.card button {
+  cursor: pointer;
+  padding: 10px;
+  background-color: var(--Orange);
+  color: var(--White);
+  outline: none;
+  border: none;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+}
+
+.card button:hover {
+  background-color: var(--White);
+  color: var(--Orange);
+}
+
+.card__rated {
+  background-color: hsl(213, 19%, 18%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.card__rated .main__para {
+  background-color: hsla(211, 15%, 27%, 0.582);
+  color: var(--Orange);
+  padding: 5px 15px;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+
+.card__rated h2 {
+  color: var(--White);
+}
+
+.card__rated p {
+  color: var(--Light-Grey);
+}
+
+.hidden {
+  display: none;
+}
